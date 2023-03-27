@@ -7,7 +7,7 @@ resource "google_compute_instance" "default" {
   zone         = "us-central1-a"
 
   # ability to append more tags using variable
-  tags = concat(["foo", "bar", "localstate"], var.additional_tags)
+  tags = concat(["foo", "bar"], var.additional_tags)
 
   boot_disk {
     initialize_params {
